@@ -21,10 +21,10 @@ public class Receipt2
       int burgers = input.nextInt();
 
      String highschool = "Trevor Packer HS Snack Bar";
-     double drinkprice = 1.50;
-     double candyprice = 1.25;
-     double dogprice = 2.75;
-     double burgerprice = 3.50;
+     double drinkprice = Math.random() * 2;
+     double candyprice = Math.random() * 2;
+     double dogprice = Math.random() * 2;
+     double burgerprice = Math.random() * 2;
       System.out.println("**************************************");
       System.out.println("*                                    *");
       System.out.println("*" + highschool + "           *");
@@ -36,5 +36,19 @@ public class Receipt2
       System.out.println("*                                    *");    
       System.out.println("**************************************");
       System.out.println("Order #: 35");
+      System.out.println("drinks ordered: " + drinks + " Total: " + drinks * drinkprice);
+      System.out.println("candies ordered: " + candies + " Total: " + candies * candyprice);
+      System.out.println("hot dogs ordered: " + hotdogs + " Total: " + hotdogs * dogprice);
+      System.out.println("burgers ordered: " + burgers + " Total: " + burgers * burgerprice);
+      double subtotal = drinks * drinkprice;
+      subtotal += candies * candyprice;
+      subtotal += hotdogs * dogprice;
+      subtotal += burgers * burgerprice;
+      System.out.println("subtotal price: " + subtotal);
+      double tax = Math.random(1.1, 1.25);
+      
+      double total = subtotal * tax;
+      System.out.println("Tax: " + tax);
+      System.out.println("Total: " + total);
    }
 }
