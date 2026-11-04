@@ -33,7 +33,7 @@ public class Receipt2
        
       skeww += highschool.substring(space + 1, space + 2);
       highschool = highschool.substring(space + 1);
-       space = highschool.indexOf(" ");
+      space = highschool.indexOf(" ");
        
       skeww += highschool.substring(space + 1, space + 2);
       highschool = highschool.substring(space + 1);
@@ -45,7 +45,7 @@ public class Receipt2
       double burgerprice = 3.5;//Math.random() * 2;
       System.out.println("**************************************");
       System.out.println("*                                    *");
-      System.out.println("*" + skeww.toUpperCase() + "                             *");
+      System.out.println("*     " + skeww.toUpperCase() + "                           *");
       System.out.println("*                                    *");
       System.out.println("*     Drink ..........$"+drinkprice+"           *");                      
       System.out.println("*     Candy ..........$"+candyprice+"          *");     
