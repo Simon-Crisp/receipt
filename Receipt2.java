@@ -11,7 +11,7 @@ public class Receipt2
    public static void main(String [] args)
    {
       Scanner input = new Scanner(System.in);
-      /*System.out.println("How many drinks are you ordering?");
+      System.out.println("How many drinks are you ordering?");
       int drinks = input.nextInt();
       System.out.println("How many candies are you ordering?");
       int candies = input.nextInt();
@@ -19,28 +19,41 @@ public class Receipt2
       int hotdogs = input.nextInt();
       System.out.println("How many hamburgers are you ordering?");
       int burgers = input.nextInt();
-      int ordernumber = 0;
-      */
-     int drinks = (int) (Math.random() * 3);
-     int candies = (int) (Math.random() * 3);
-     int hotdogs = (int) (Math.random() * 3);
-     int burgers = (int) (Math.random() * 3);
-     String highschool = "Trevor Packer HS Snack Bar";
-     double drinkprice = 1.5;//Math.random() * 2;
-     double candyprice = 1.25; //Math.random() * 2;
-     double dogprice = 2.75;//Math.random() * 2;
-     double burgerprice = 3.5;//Math.random() * 2;
+      int ordernumber = (int) (Math.random() * 100);
+      input.nextLine();
+      System.out.println("Which high school do you currently attend?");
+      String highschool = input.nextLine();
+      //"I DONT THINK YOU KNOW HOW MUCH LOOKS MATTER AT THIS SKEWW!!!!!!!" - Eric Cartman
+      String skeww = highschool.substring(0,1);
+      int space = highschool.indexOf(" ");
+       
+      skeww += highschool.substring(space + 1, space + 2);
+      highschool = highschool.substring(space + 1);
+      space = highschool.indexOf(" ");
+       
+      skeww += highschool.substring(space + 1, space + 2);
+      highschool = highschool.substring(space + 1);
+       space = highschool.indexOf(" ");
+       
+      skeww += highschool.substring(space + 1, space + 2);
+      highschool = highschool.substring(space + 1);
+    
+      
+      double drinkprice = 1.5;//Math.random() * 2;
+      double candyprice = 1.25; //Math.random() * 2;
+      double dogprice = 2.75;//Math.random() * 2;
+      double burgerprice = 3.5;//Math.random() * 2;
       System.out.println("**************************************");
       System.out.println("*                                    *");
-      System.out.println("*" + highschool + "           *");
+      System.out.println("*" + skeww.toUpperCase() + "                             *");
       System.out.println("*                                    *");
-      System.out.println("*     Drink ..........$"+drinkprice+"          *");                      
+      System.out.println("*     Drink ..........$"+drinkprice+"           *");                      
       System.out.println("*     Candy ..........$"+candyprice+"          *");     
       System.out.println("*     Hot Dog ........$"+dogprice+"          *");     
-      System.out.println("*     Hamburger ......$"+burgerprice+"          *");     
+      System.out.println("*     Hamburger ......$"+burgerprice+"           *");     
       System.out.println("*                                    *");    
       System.out.println("**************************************");
-      int ordernumber = (int) (Math.random() * 100);
+      
       System.out.println("Order #: " + ordernumber);
       System.out.println("drinks ordered: " + drinks + " Total: " + drinks * drinkprice);
       System.out.println("candies ordered: " + candies + " Total: " + candies * candyprice);
